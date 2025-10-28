@@ -1,24 +1,17 @@
-# 🔢 C - Sorting Algorithms & Big O
+# Sorting Algorithms & Big O Project
 
-This project implements a variety of classic sorting algorithms in C and analyzes their time complexities using Big O notation. It is part of the **Holberton School** low-level programming curriculum.
+This project implements a variety of classic sorting algorithms in C and analyzes their time complexities using Big O notation. It is part of the Holberton School low-level programming curriculum
 
----
-
-## 📘 Description
+~_~S~X Description
 
 Sorting is one of the most fundamental operations in computer science. It is used in searching, data organization, and optimization. In this project, we explore multiple sorting algorithms, how they work, and their performance in different cases.
 
----
+~_ Data Structure
 
-## 🧱 Data Structures
-
-### ➕ Arrays
+-Arrays 
 Most sorting algorithms operate on arrays of integers.
 
-### 🔁 Doubly Linked List
-Used for `insertion_sort_list`, defined as:
-
-```c
+-Doubly Linked List
 typedef struct listint_s
 {
     const int n;
@@ -26,8 +19,8 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
-📂 Files Overview
-File	Description
+~_~S~B Files Overview
+File Description
 sort.h	Header file with structure definitions & prototypes
 print_array.c	Utility function to print arrays
 print_list.c	Utility function to print doubly linked lists
@@ -40,7 +33,7 @@ print_list.c	Utility function to print doubly linked lists
 2-O	Time complexity for Selection Sort
 3-O	Time complexity for Quick Sort
 
-⚙️ Function Prototypes
+~Z~Y~O Function Prototypes
 /* sort.h */
 
 void print_array(const int *array, size_t size);
@@ -49,9 +42,11 @@ void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
-void quick_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size)
 
-🌀 Sorting Algorithms
+
+
+~_~Sorting Algorithms
 🔸 Bubble Sort
 
 File: 0-bubble_sort.c
@@ -120,7 +115,8 @@ Average Case: O(n log n)
 
 Worst Case: O(n²)
 
-🔍 Big O Notation Files
+
+~_~Big O Notation Files
 
 Each sorting algorithm has an associated .O file that details its time complexity:
 
@@ -130,7 +126,8 @@ File	Best	Average	Worst
 2-O	O(n²)	O(n²)	O(n²)
 3-O	O(n log n)	O(n log n)	O(n²)
 
-💻 Example Usage
+~_~R Example Usage
+
 #include <stdio.h>
 #include "sort.h"
 
@@ -146,16 +143,18 @@ int main(void)
     return (0);
 }
 
-👥 Authors
 
-This project is part of the Holberton School curriculum on data structures and algorithm analysis.
+~_~Q Authors
+
+This project is part of the Holberton School curriculum on data structures and algorithms.
 
 Team Members:
 
-Thekra Alhenaki @thekra-alh
+Thekra Alhenaki (thekra-alh)
 
-Rateel Bahathiq @rateelbahathiq
+Rateel Bahathiq (rateelbahathiq
+)
 
-📜 License
+~_~S~\ License
 
-This project is intended for educational purposes only as part of the Holberton School program.
+This project is intended for educational purposes as part of the Holberton School curriculum.i
