@@ -1,6 +1,6 @@
 # 🔢 C - Sorting Algorithms & Big O
 
-This project implements a variety of classic sorting algorithms in C and analyzes their time complexities using Big O notation. It is part of the Holberton School low-level programming curriculum.
+This project implements a variety of classic sorting algorithms in C and analyzes their time complexities using Big O notation. It is part of the **Holberton School** low-level programming curriculum.
 
 ---
 
@@ -13,12 +13,10 @@ Sorting is one of the most fundamental operations in computer science. It is use
 ## 🧱 Data Structures
 
 ### ➕ Arrays
-
 Most sorting algorithms operate on arrays of integers.
 
 ### 🔁 Doubly Linked List
-
-Used for `insertion_sort_list`, the list node is defined as:
+Used for `insertion_sort_list`, defined as:
 
 ```c
 typedef struct listint_s
@@ -27,23 +25,22 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
+
 📂 Files Overview
 File	Description
-sort.h	Header file with structure definitions and prototypes
-print_array.c	Utility function to print an array
-print_list.c	Utility function to print a doubly linked list
+sort.h	Header file with structure definitions & prototypes
+print_array.c	Utility function to print arrays
+print_list.c	Utility function to print doubly linked lists
 0-bubble_sort.c	Implements the Bubble Sort algorithm
-1-insertion_sort_list.c	Implements Insertion Sort for doubly linked list
+1-insertion_sort_list.c	Insertion Sort for a doubly linked list
 2-selection_sort.c	Implements Selection Sort
-3-quick_sort.c	Implements Quick Sort using Lomuto partition
-0-O	Time complexity of Bubble Sort
-1-O	Time complexity of Insertion Sort
-2-O	Time complexity of Selection Sort
-3-O	Time complexity of Quick Sort
+3-quick_sort.c	Implements Quick Sort (Lomuto partition)
+0-O	Time complexity for Bubble Sort
+1-O	Time complexity for Insertion Sort
+2-O	Time complexity for Selection Sort
+3-O	Time complexity for Quick Sort
 
 ⚙️ Function Prototypes
-c
-Copy code
 /* sort.h */
 
 void print_array(const int *array, size_t size);
@@ -53,79 +50,87 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+
 🌀 Sorting Algorithms
 🔸 Bubble Sort
+
 File: 0-bubble_sort.c
 
 Prototype: void bubble_sort(int *array, size_t size);
 
-Description: Repeatedly swaps adjacent elements if they are in the wrong order. Inefficient but easy to implement.
+Description:
+Repeatedly swaps adjacent elements if they are in the wrong order. It continues until the array is sorted.
 
-Complexity:
+Time Complexity:
 
-Best: O(n)
+Best Case: O(n)
 
-Average: O(n^2)
+Average Case: O(n²)
 
-Worst: O(n^2)
+Worst Case: O(n²)
 
 🔸 Insertion Sort (Doubly Linked List)
+
 File: 1-insertion_sort_list.c
 
 Prototype: void insertion_sort_list(listint_t **list);
 
-Description: Builds a sorted list by inserting one element at a time in the correct position. Best suited for partially sorted or small datasets.
+Description:
+Sorts a doubly linked list by building a sorted portion one node at a time.
 
-Complexity:
+Time Complexity:
 
-Best: O(n)
+Best Case: O(n)
 
-Average: O(n^2)
+Average Case: O(n²)
 
-Worst: O(n^2)
+Worst Case: O(n²)
 
 🔸 Selection Sort
+
 File: 2-selection_sort.c
 
 Prototype: void selection_sort(int *array, size_t size);
 
-Description: Repeatedly finds the minimum value in the unsorted part and swaps it with the first unsorted element.
+Description:
+Finds the minimum element from the unsorted part and swaps it with the first unsorted element.
 
-Complexity:
+Time Complexity:
 
-Best: O(n^2)
+Best Case: O(n²)
 
-Average: O(n^2)
+Average Case: O(n²)
 
-Worst: O(n^2)
+Worst Case: O(n²)
 
-🔸 Quick Sort (Lomuto Partition)
+🔸 Quick Sort (Lomuto Partition Scheme)
+
 File: 3-quick_sort.c
 
 Prototype: void quick_sort(int *array, size_t size);
 
-Description: Uses a divide-and-conquer strategy. Partitions the array and recursively sorts the subarrays.
+Description:
+Uses a divide-and-conquer approach. It partitions the array and recursively sorts the subarrays using Lomuto partitioning.
 
-Complexity:
+Time Complexity:
 
-Best: O(n log n)
+Best Case: O(n log n)
 
-Average: O(n log n)
+Average Case: O(n log n)
 
-Worst: O(n^2)
+Worst Case: O(n²)
 
-🔍 Big O Files
-Each sort has a corresponding -O file explaining its time complexities (1 per line):
+🔍 Big O Notation Files
 
-File	Contents
-0-O	Best: O(n), Avg: O(n^2), Worst: O(n^2)
-1-O	Best: O(n), Avg: O(n^2), Worst: O(n^2)
-2-O	Best: O(n^2), Avg: O(n^2), Worst: O(n^2)
-3-O	Best: O(nlogn), Avg: O(nlogn), Worst: O(n^2)
+Each sorting algorithm has an associated .O file that details its time complexity:
+
+File	Best	Average	Worst
+0-O	O(n)	O(n²)	O(n²)
+1-O	O(n)	O(n²)	O(n²)
+2-O	O(n²)	O(n²)	O(n²)
+3-O	O(n log n)	O(n log n)	O(n²)
 
 💻 Example Usage
-c
-Copy code
 #include <stdio.h>
 #include "sort.h"
 
@@ -140,23 +145,17 @@ int main(void)
 
     return (0);
 }
-🧪 Testing
-You can compile and test with:
-
-bash
-Copy code
-gcc -Wall -Wextra -Werror -pedantic 0-bubble_sort.c print_array.c 0-main.c -o bubble
-./bubble
-Make sure to replace 0-bubble_sort.c and 0-main.c with the corresponding source files.
 
 👥 Authors
-This project is part of the Holberton School curriculum on sorting algorithms and algorithm analysis.
+
+This project is part of the Holberton School curriculum on data structures and algorithm analysis.
 
 Team Members:
 
-Thekra Alhenaki (@thekra-alh)
+Thekra Alhenaki @thekra-alh
 
-Rateel Bahathiq (@rateelbahathiq)
+Rateel Bahathiq @rateelbahathiq
 
 📜 License
-This project is for educational purposes only as part of the Holberton School program.
+
+This project is intended for educational purposes only as part of the Holberton School program.
